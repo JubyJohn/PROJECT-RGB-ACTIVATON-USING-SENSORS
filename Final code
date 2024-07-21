@@ -1,0 +1,47 @@
+
+void setup()
+{
+pinMode(D0,OUTPUT);
+pinMode(D1,OUTPUT);
+pinMode(D2,OUTPUT);
+pinMode(D5,INPUT);
+pinMode(D6,INPUT);
+pinMode(D7,INPUT);
+Serial.begin(9600);
+}
+
+void loop() 
+{
+  int x,y.z;
+  x=digitalRead(D5); // push button reading
+  y=digitalRead(D6); // IR Sensor reading
+  z=digitalRead(D7); // Tilt Sensor reading
+  
+
+    if(x==1)
+    {
+      digitalWrite(D0,HIGH);
+      digitalWrite(D1,LOW);
+      digitalWrite(D2,LOW);
+    }
+    else if(y==1)
+    {
+      digitalWrite(D0,LOW);
+      digitalWrite(D1,HIGH);
+      digitalWrite(D2,LOW);
+      
+     }
+    else if(z==1)
+      {
+      digitalWrite(D0,LOW);
+      digitalWrite(D2,HIGH);
+      digitalWrite(D1,LOW);
+      }
+    if(x==0 && y==0 && z==0)
+      {
+       digitalWrite(D0,LOW);
+      digitalWrite(D1,LOW);
+      digitalWrite(D2,LOW);
+      }
+      
+}
