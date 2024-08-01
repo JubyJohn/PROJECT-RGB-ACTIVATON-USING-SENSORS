@@ -64,3 +64,10 @@ To blink different colors of RGB sensor by the activation of tilt ,push button a
 <br> Step 6 : Interface ESP8266 microcontroller with RGB Sensor, IR Sensor, Tilt Sensor and push button by modifying programs.
 
 
+## OUTPUT
+
+<br> When push button is pressed, red light turned on 
+<br> When obstruct detected by IR sensor, green light turned on
+<br> When tilting sensed by tilt sensor, blue light turned on
+
+
